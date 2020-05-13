@@ -45,7 +45,8 @@ module rounded_rectangle(width,height,corner_radius) {
 module case() {
   difference() {
     // outside shell
-    translate([corner_radius, corner_radius, corner_radius])
+    translate([corner_radius, corner_radius, corner_radius/2])
+    resize([case_width, case_height, case_thickness])
     minkowski() {
       cube([case_width - corner_radius*2, case_height - corner_radius*2, .01]);
       sphere(r=corner_radius, $fn=80);

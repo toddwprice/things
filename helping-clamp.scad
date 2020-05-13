@@ -72,9 +72,9 @@ union() {
 // small screw
 translate([-50,0,0]) 
 union() {
-	difference() {
+	!difference() {
 		union() {
-			hex_bolt(small_screw_size,small_screw_length);
+			hex_bolt(small_screw_size,20);
 			cylinder(r=small_screw_size,h=small_screw_thumb_height);
 		}
 
